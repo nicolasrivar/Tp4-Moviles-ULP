@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_lista_farmacias">
+
+    <fragment
+        android:id="@+id/nav_lista_farmacias"
+        android:name="com.example.tp4.ui.lista_farmacias.ListaFarmaciasFragment"
+        android:label="Lista de Farmacias"
+        tools:layout="@layout/fragment_lista_farmacias">
+        <action
+            android:id="@+id/farmaciaDetallesFragment"
+            app:destination="@id/nav_farmacia_detalles" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_farmacia_detalles"
+        android:name="com.example.tp4.ui.lista_farmacias.FarmaciaDetallesFragment"
+        android:label="Detalles de Farmacia"
+        tools:layout="@layout/fragment_farmacia_detalles" />
+
+    <fragment
+        android:id="@+id/nav_mapa"
+        android:name="com.example.tp4.ui.mapa.MapaFragment"
+        android:label="Mapa"
+        tools:layout="@layout/fragment_mapa" />
+</navigation>
